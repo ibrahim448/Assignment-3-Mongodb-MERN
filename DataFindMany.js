@@ -19,7 +19,7 @@ const findManyData = async()=>{
              projection: { _id: 0, Name: 1, Age: 1, Gender: 1},
            };
  
-         const result = collectionName.find(findPatientData, options);
+         const result = collectionName.find(findDataNoCondition, options);
  
          if((await result.countDocuments)===0){
              console.log("data not found");
